@@ -1,6 +1,6 @@
-# Turborepo Design System starter
+# Monorepo Turborepo boilerplate
 
-This is an official React design system starter powered by Turborepo.
+This is a monorepo boilerplate powered by Turborepo.
 
 ## What's inside?
 
