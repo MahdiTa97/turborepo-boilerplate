@@ -1,6 +1,6 @@
 # Monorepo Turborepo boilerplate
 
-This is a monorepo boilerplate powered by Turborepo.
+This is a monorepo boilerplate powered by [Turborepo](https://turborepo.org/).
 
 ## What's inside?
 
