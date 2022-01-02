@@ -12,6 +12,7 @@ This Turborepo includes the following packages and apps:
 - `web`: A website site powered by [Next.js](https://nextjs.org)
 - `spa`: A SPA website site powered by [create-react-app](https://create-react-app.dev/)
 - `@my/core`: core React components
+- `@my/theme-kit`: A react UI theme kit powered by [Tailwind](https://tailwindcss.com/) and [Headlessui](https://headlessui.dev)
 - `@my/utils`: shared React utilities
 - `@my/tsconfig`: shared `tsconfig.json`s used throughout the monorepo
 - `eslint-preset-my`: ESLint preset
