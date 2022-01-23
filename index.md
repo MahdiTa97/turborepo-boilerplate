@@ -1,37 +1,65 @@
-## Welcome to GitHub Pages
+## Monorepo Turborepo Boilerplate
 
-You can use the [editor on GitHub](https://github.com/MahdiTa97/turborepo-boilerplate/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+This is a monorepo boilerplate powered by [Turborepo](https://turborepo.org/).
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## What's inside?
 
-### Markdown
+This Turborepo includes the following packages and apps:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Apps and Packages
 
-```markdown
-Syntax highlighted code block
+- `docs`: A placeholder documentation site powered by [Next.js](https://nextjs.org)
+- `web`: A website site powered by [Next.js](https://nextjs.org)
+- `spa`: A SPA website site powered by [create-react-app](https://create-react-app.dev/)
+- `@my/core`: core React components
+- `@my/theme-kit`: A react UI theme kit powered by [Tailwind](https://tailwindcss.com/) and [Headlessui](https://headlessui.dev)
+- `@my/utils`: shared React utilities
+- `@my/tsconfig`: shared `tsconfig.json`s used throughout the monorepo
+- `eslint-preset-my`: ESLint preset
 
-# Header 1
-## Header 2
-### Header 3
+Each package and app is 100% [Typescript](https://www.typescriptlang.org/).
 
-- Bulleted
-- List
+### Utilities
 
-1. Numbered
-2. List
+This turborepo has some additional tools already setup for you:
 
-**Bold** and _Italic_ and `Code` text
+- [Typescript](https://www.typescriptlang.org/) for static type checking
+- [ESLint](https://eslint.org/) for code linting
+- [Prettier](https://prettier.io) for code formatting
+- [CommitLint](https://commitlint.js.org/#/) for commit linting
 
-[Link](url) and ![Image](src)
+## Using this boilerplate
+
+If you want to use this in the interim, you run the following command:
+
+```sh
+git clone https://github.com/MahdiTa97/turborepo-boilerplate
+cd turborepo-boilerplate
+yarn install
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+### Changing the NPM organization scope
 
-### Jekyll Themes
+The NPM organization scope for this design system starter is `@my`. To change this, it's a bit manual at the moment, but you'll need to do the following:
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/MahdiTa97/turborepo-boilerplate/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+- Rename folders in `packages/*` to replace `my` with your desired scope
+- Search and replace `my` with your desired scope
+- Re-run `yarn install`
 
-### Support or Contact
+### Publishing packages
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+#### NPM
+
+If you want to publish package to the public NPM registry and make them publicly available, this is already setup for you.
+
+To publish packages to a private NPM organization scope, **remove** the following from each of the `package.json`'s
+
+```diff
+- "publishConfig": {
+-  "access": "public"
+- },
+```
+
+#### GitHub Package Registry
+
+See [Working with the npm registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#publishing-a-package-using-publishconfig-in-the-packagejson-file)
