@@ -14,7 +14,7 @@
   },
   "scripts": {
     "start": "tsdx watch",
-    "dev": "concurrently \"tsdx watch\" \"yarn build-tailwind\"",
+    "dev": "concurrently \"tsdx watch\" \"yarn watch-tailwind\"",
     "build": "tsdx build && yarn build-tailwind",
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",
@@ -24,7 +24,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "build-tailwind": "NODE_ENV=production npx tailwindcss -o ./dist/tailwind.css --minify",
-    "watch-tailwind": "npx tailwindcss -i ./src/assets/tailwind.css -o ./dist/tailwind.css --watch"
+    "watch-tailwind": "npx tailwindcss -i ./tailwind.css -o ./dist/tailwind.css --watch"
   },
   "peerDependencies": {
     "react": ">=16"

@@ -1,0 +1,7 @@
+@tailwind base;
+@import './src/assets/base.css';
+
+@tailwind components;
+@import './src/assets/components.css';
+
+@tailwind utilities;
