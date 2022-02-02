@@ -1,5 +1,5 @@
 {
-  "name": "@my/mylib",
+  "name": "@my/spa",
   "version": "1.0.0",
   "private": true,
   "scripts": {
