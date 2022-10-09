@@ -14,6 +14,6 @@ export interface Props extends HTMLAttributes<HTMLDivElement> {
 export const Thing: FC<Props> = ({ children }) => (
   // We are adding these classes here
   <div className="mt-10 bg-red-100 p-5 rounded-md">
-    {children || `the snozzberries taste like snozzberries`}
+    {children || `the snozzberries taste like snozzberries123`}
   </div>
 );
