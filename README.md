@@ -2,6 +2,8 @@
 
 This is a monorepo boilerplate powered by [Turborepo](https://turborepo.org/).
 
+You can also implement Monorepo with [NX](https://nx.dev/). It's boilerplate is [HERE](https://github.com/MahdiTa97/nx-next-react-boilerplate)!
+
 ## What's inside?
 
 This Turborepo includes the following packages and apps:
