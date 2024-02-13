@@ -1,4 +1,0 @@
-{
-  "include": ["src", "types"],
-  "extends": "@my/tsconfig/theme-kit.json"
-}
