@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@repo/ui": "*",
-    "next": "^14.2.15",
+    "next": "^14.2.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
