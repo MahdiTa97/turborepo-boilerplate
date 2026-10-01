@@ -24,14 +24,14 @@ foundation, plus a working `ui` package with daisyUI and Vercel's ESLint style g
 
 ## Why use this over `create-turbo`
 
-|                                     | `create-turbo`                | This starter                            |
-| ----------------------------------- | ----------------------------- | --------------------------------------- |
-| Shared UI package                   | stub                          | working, with daisyUI + 5 components    |
-| Tailwind config for a package       | not set up                    | shared preset via `@repo/tailwind-config` |
-| Lint config                         | default Next.js               | [Vercel style guide](https://github.com/vercel/style-guide) |
-| TS config                           | copied per app                | shared presets, extended per app        |
-| CI                                  | none                          | lint + type-check + build               |
-| Dependabot                          | manual                        | enabled                                 |
+|                               | `create-turbo`  | This starter                                                |
+| ----------------------------- | --------------- | ----------------------------------------------------------- |
+| Shared UI package             | stub            | working, with daisyUI + 5 components                        |
+| Tailwind config for a package | not set up      | shared preset via `@repo/tailwind-config`                   |
+| Lint config                   | default Next.js | [Vercel style guide](https://github.com/vercel/style-guide) |
+| TS config                     | copied per app  | shared presets, extended per app                            |
+| CI                            | none            | lint + type-check + build                                   |
+| Dependabot                    | manual          | enabled                                                     |
 
 ## Stack
 
@@ -72,14 +72,14 @@ Turbo runs every script across `apps/*` and `packages/*` and caches the results.
 
 Run from the repo root:
 
-| Command         | What it does                                              |
-| --------------- | --------------------------------------------------------- |
-| `yarn dev`      | Start every app in watch mode (persistent, uncached)       |
-| `yarn build`    | Build all packages then apps, respecting dependency order |
-| `yarn lint`     | ESLint across every workspace                              |
-| `yarn type-check` | `tsc --noEmit` across every workspace                    |
-| `yarn format`   | Prettier + Tailwind class sorting                         |
-| `yarn clean`    | Remove build artifacts                                     |
+| Command           | What it does                                              |
+| ----------------- | --------------------------------------------------------- |
+| `yarn dev`        | Start every app in watch mode (persistent, uncached)      |
+| `yarn build`      | Build all packages then apps, respecting dependency order |
+| `yarn lint`       | ESLint across every workspace                             |
+| `yarn type-check` | `tsc --noEmit` across every workspace                     |
+| `yarn format`     | Prettier + Tailwind class sorting                         |
+| `yarn clean`      | Remove build artifacts                                    |
 
 ## Adding a second app
 
@@ -142,7 +142,7 @@ If you later add a second UI package and need isolation, set a prefix once:
 ```ts
 // packages/ui/tailwind.config.ts
 const config = {
-  prefix: "ui-",   // then update every class in src/ to match
+  prefix: "ui-", // then update every class in src/ to match
   /* … */
 };
 ```
@@ -155,10 +155,14 @@ Change the theme in `packages/tailwind-config/tailwind.config.ts` and every app 
 
 ```ts
 export default {
-  theme: { extend: { /* … */ } },
+  theme: {
+    extend: {
+      /* … */
+    },
+  },
   plugins: [require("daisyui")],
   daisyui: {
-    themes: ["emerald"],   // any daisyUI theme
+    themes: ["emerald"], // any daisyUI theme
   },
 };
 ```
@@ -167,13 +171,13 @@ daisyUI's full theme list is in their [themes documentation](https://daisyui.com
 
 ## Included components
 
-| Component           | Description                                          |
-| ------------------- | ---------------------------------------------------- |
-| `Card`              | Link card with hover transition                     |
-| `Container`         | Centered responsive container                       |
-| `Navbar`            | daisyUI navbar with dropdown menu                    |
-| `HeroLogin`         | Split hero + sign-in form layout                     |
-| `Button`, `Theme`   | Re-exported from `react-daisyui`                     |
+| Component         | Description                       |
+| ----------------- | --------------------------------- |
+| `Card`            | Link card with hover transition   |
+| `Container`       | Centered responsive container     |
+| `Navbar`          | daisyUI navbar with dropdown menu |
+| `HeroLogin`       | Split hero + sign-in form layout  |
+| `Button`, `Theme` | Re-exported from `react-daisyui`  |
 
 Import from the package root:
 
@@ -185,10 +189,10 @@ import { Card, Container, Navbar, Button } from "@repo/ui";
 
 `@repo/eslint-config` exposes two presets — extend the right one:
 
-| Preset             | For                                    |
-| ------------------ | -------------------------------------- |
-| `@repo/eslint-config/next.js` | Next.js apps                    |
-| `@repo/eslint-config/library.js` | Plain TS/React libraries     |
+| Preset                           | For                      |
+| -------------------------------- | ------------------------ |
+| `@repo/eslint-config/next.js`    | Next.js apps             |
+| `@repo/eslint-config/library.js` | Plain TS/React libraries |
 
 ```js
 // apps/web/.eslintrc.js

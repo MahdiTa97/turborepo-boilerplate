@@ -1,11 +1,11 @@
-import type { Config } from 'tailwindcss';
-import sharedConfig from '@repo/tailwind-config';
+import type { Config } from "tailwindcss";
+import sharedConfig from "@repo/tailwind-config";
 
-const config: Pick<Config, 'presets' | 'content'> = {
+const config: Pick<Config, "presets" | "content"> = {
   content: [
-    './src/**/*.tsx',
-    '../../node_modules/daisyui/dist/**/*.js',
-    '../../node_modules/react-daisyui/dist/**/*.js',
+    "./src/**/*.tsx",
+    "../../node_modules/daisyui/dist/**/*.js",
+    "../../node_modules/react-daisyui/dist/**/*.js",
   ],
   presets: [sharedConfig],
   /*

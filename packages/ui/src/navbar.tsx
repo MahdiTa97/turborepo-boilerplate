@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import type { ReactNode } from 'react';
-import { Button, Menu, Navbar as NavbarDaisyui } from 'react-daisyui';
+import type { ReactNode } from "react";
+import { Button, Menu, Navbar as NavbarDaisyui } from "react-daisyui";
 
 export function Navbar({ title }: { title: string }): ReactNode {
   return (

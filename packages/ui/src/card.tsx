@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from "react";
 
 interface CardProps {
   title: string;
@@ -15,7 +15,7 @@ export function Card({ title, children, href }: CardProps): JSX.Element {
       target="_blank"
     >
       <h2 className="mb-3 text-2xl font-semibold">
-        {title}{' '}
+        {title}{" "}
         <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
           -&gt;
         </span>
